@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+  <div class="jumbotron">
+    <div class="container text-center">
+      <h1>Trollee</h1>
+      <p>Mission, Vission & Values</p>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Logo</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li class="active">
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">Products</a>
+          </li>
+          <li>
+            <a href="#">Deals</a>
+          </li>
+          <li>
+            <a href="#">Stores</a>
+          </li>
+          <li>
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="#">
+              <span class="glyphicon glyphicon-user"></span> Your Account</a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="glyphicon glyphicon-shopping-cart"></span> Cart</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="container-fluid">
+    <h1>Welcome, Admin </h1>
+    <br>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <b>Website Traffic (Live)</b>
+          </div>
+          <div class="panel-body">
+            <div id="RTLine"></div>
+          </div>
+        </div>
+        <br>        
+        <div class="child-element">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <b>Traffic Analysis</b>
+              <select class="form-control dropdown-box2" id="trafficAnalysis">
+              <option value="week">Past Week</option>
+              <option value="month">Past Month</option>
+              <option value="3months">Past 3 Months</option>
+            </select>
+            </div>
+            <div class="panel-body">
+            <div id="hm1">
+              <div id="heatmap1"></div>
+            </div>
+            <div id="hm2" style="display: none;">
+              <div id="heatmap2"></div>
+            </div>
+            <div id="hm3" style="display: none;">
+              <div id="heatmap3"></div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="col-sm-9">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <b>Active Users</b>
+            </div>
+            <div class="panel-body">
+              <div class="centralised-text">
+                <p style= "height: 10px"><font size="+1">12376</font></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-9">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <b>Active Merchants</b>
+            </div>
+            <div class="panel-body">
+              <div class="centralised-text">
+                <p style= "height: 10px"><font size="+1">9138</font></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-9">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <b>Total Orders</b>
+            </div>
+            <div class="panel-body">
+              <div class="centralised-text">
+                <p style= "height: 10px"><font size="+1">24788</font></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-9">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <b>New Sign-ups</b>
+            </div>
+            <div class="panel-body">
+              <div class="centralised-text">
+                <p style= "height: 10px"><font size="+1">317</font></p>
+              </div>
+            </div>
+          </div> 
+        </div>
+      </div>
+
+      <div class="col-sm-3">
+
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <b>Trending</b>
+          </div>
+
+          <div class="col-12">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <b>Purchase</b>
+              </div>
+              <div id="table1"></div>
+            </div>
+          </div>
+
+          <div class="col-12">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <b>Product Views</b>
+              </div>
+              <div id="table2"></div>
+            </div>
+          </div>
+
+          <div class="col-12">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <b>Merchants</b>
+              </div>
+              <div id="table3"></div>
+            </div>
+          </div>
+
+        </div>
+
+
+      </div>
+    </div>
+    <br>
+
+
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <b>Clickstream Funnel Analysis</b>
+            <select class="form-control dropdown-box" id="clickstreamAnalysis">
+              <option value="day">Past 24 Hours</option>
+              <option value="week">Past Week</option>
+              <option value="month">Past Month</option>
+            </select>
+          </div>
+          <div class="panel-body">
+            <div id="hb1">
+              <div id="hbar1"></div>
+            </div>
+            <div id="hb2" style="display: none;">
+              <div id="hbar2"></div>
+            </div>
+            <div id="hb3" style="display: none;">
+              <div id="hbar3"></div>
+            </div>
+            </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <b>Trending Keywords</b>
+          </div>
+          <div class="panel-body">
+          <div id="cloudWord"></div>
+          <!-- <div id="group_bar1"></div> -->
+        </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+
+
+    <div class="row">
+
+      <div class="col-sm-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <b>Recommender Performance</b>
+          </div>
+          <div class="panel-body">
+            <div id="double_line"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <b>Sales by Customer Type</b>
+          </div>
+          <div class="panel-body">
+          <div id="group_bar1"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <b>Returning Customer Traffic</b>
+            <select class="form-control dropdown-box" id="customerTraffic">
+              <option value="all">All</option>
+              <option value="gender">Gender</option>
+              <option value="device">Device</option>
+            </select>
+          </div>
+          <div class="panel-body">
+            <div id="baar1">
+              <div id="barchart1"></div>
+            </div>
+            <div id="baar2" style="display: none;">
+              <div id="group_bar2" style="width:360px;"></div>
+            </div>
+            <div id="baar3" style="display: none;">
+              <div id="group_bar3" style="width:360px;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+    <br>
+
+    <footer class="container-fluid text-center">
+      <p>Online Store Copyright</p>
+      <form class="form-inline">Get deals:
+        <input type="email" class="form-control" size="50" placeholder="Email Address">
+        <button type="button" class="btn btn-danger">Sign Up</button>
+      </form>
+    </footer>
+
+  </div>
+
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="https://rawgit.com/jasondavies/d3-cloud/master/build/d3.layout.cloud.js"></script>
+  <script type="text/javascript" src="https://cdn.plot.ly/plotly-latest.min.js"></script> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
+
+</html>
